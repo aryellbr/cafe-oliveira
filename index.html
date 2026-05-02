@@ -3,85 +3,218 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Café Oliveira</title>
+    <title>Café Oliveira — Vieira de Leiria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="logo">☕ Café Oliveira</div>
 
-        <nav class="nav">
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#local">Localização</a>
-          <a href="https://www.instagram.com/cafe.oliveiraa/" target="_blank"
-            >Instagram</a
-          >
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">
+          <span class="logo__icon">☕</span>
+          <span class="logo__text">Café Oliveira</span>
+        </a>
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#sobre" class="nav__link">Sobre</a>
+          <a href="#servicos" class="nav__link">Serviços</a>
+          <a href="#local" class="nav__link">Localização</a>
+          <a href="https://www.instagram.com/cafe.oliveiraa/" target="_blank" rel="noopener" class="nav__link nav__link--ig">Instagram</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#sobre" class="mobile-nav__link">Sobre</a>
+      <a href="#servicos" class="mobile-nav__link">Serviços</a>
+      <a href="#local" class="mobile-nav__link">Localização</a>
+      <a href="https://www.instagram.com/cafe.oliveiraa/" target="_blank" rel="noopener" class="mobile-nav__link">Instagram</a>
+    </div>
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-content">
-        <h1>Café Oliveira</h1>
-        <p>Ambiente acolhedor em Vieira de Leiria</p>
-
-        <div class="cta">
-          <a
-            class="btn primary"
-            href="https://maps.app.goo.gl/KDyLqJjfBMAqJTFm6"
-            target="_blank"
-          >
-            📍 Como chegar
+      <div class="hero__bg"></div>
+      <div class="hero__grain"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Vieira de Leiria, Portugal</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Café</span>
+          <span class="hero__title-line hero__title-line--italic">Oliveira</span>
+        </h1>
+        <p class="hero__subtitle">Um espaço acolhedor para pausas que ficam na memória.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="https://maps.app.goo.gl/KDyLqJjfBMAqJTFm6" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Como chegar
           </a>
-
-          <a
-            class="btn instagram"
-            href="https://www.instagram.com/cafe.oliveiraa/"
-            target="_blank"
-          >
-            📸 Instagram
+          <a class="btn btn--instagram" href="https://www.instagram.com/cafe.oliveiraa/" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
           </a>
+          <a class="btn btn--outline" href="tel:+351964500814">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Ligar
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Deslize</span>
+        <svg width="14" height="20" viewBox="0 0 14 20"><rect x="1" y="1" width="12" height="18" rx="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle class="scroll-dot" cx="7" cy="6" r="2" fill="currentColor"/></svg>
+      </div>
+    </section>
 
-          <a class="btn outline" href="tel:+351964500814"> 📞 Ligar </a>
+    <!-- SOBRE -->
+    <section id="sobre" class="section section--sobre">
+      <div class="container">
+        <div class="sobre__inner">
+          <div class="sobre__text">
+            <p class="section__label">Sobre nós</p>
+            <h2 class="section__title">Mais do que um café,<br><em>um lugar para ficar.</em></h2>
+            <p class="sobre__desc">O Café Oliveira é um espaço tranquilo e confortável, ideal para pausas durante o dia. Um lugar onde o tempo passa de forma agradável, com um café bem preparado e um ambiente que convida a ficar.</p>
+            <div class="sobre__stats">
+              <div class="stat">
+                <span class="stat__num">☕</span>
+                <span class="stat__label">Café de qualidade</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">🤫</span>
+                <span class="stat__label">Ambiente tranquilo</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">🅿</span>
+                <span class="stat__label">Estacionamento grátis</span>
+              </div>
+            </div>
+          </div>
+          <div class="sobre__img-wrap">
+            <div class="sobre__img"></div>
+            <div class="sobre__img-badge">
+              <span>Vieira de Leiria</span>
+              <strong>Desde sempre</strong>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="section">
-      <h2>Sobre o Café</h2>
-      <p>Espaço tranquilo, confortável e ideal para pausas durante o dia.</p>
-    </section>
-
-    <section id="servicos" class="section dark">
-      <h2>Serviços & Ambiente</h2>
-
-      <div class="grid">
-        <div class="card">☕ Ótimo café</div>
-        <div class="card">🍺 Cerveja</div>
-        <div class="card">🥃 Bebidas alcoólicas</div>
-        <div class="card">🍸 Bar no local</div>
-        <div class="card">🚻 Banheiro</div>
-        <div class="card">🅿 Estacionamento gratuito</div>
-        <div class="card">🛋️ Aconchegante</div>
-        <div class="card">🤫 Ambiente tranquilo</div>
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section section--servicos">
+      <div class="container">
+        <p class="section__label">O que oferecemos</p>
+        <h2 class="section__title">Serviços &amp; Ambiente</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card__icon">☕</div>
+            <h3 class="service-card__title">Ótimo café</h3>
+            <p class="service-card__desc">Café preparado com cuidado, sempre fresquinho.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">🍺</div>
+            <h3 class="service-card__title">Cerveja</h3>
+            <p class="service-card__desc">Seleção de cervejas bem geladas para qualquer hora.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">🥃</div>
+            <h3 class="service-card__title">Bebidas alcoólicas</h3>
+            <p class="service-card__desc">Variedade de bebidas para todos os gostos.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">🍸</div>
+            <h3 class="service-card__title">Bar no local</h3>
+            <p class="service-card__desc">Bar completo para o seu convívio.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">🚻</div>
+            <h3 class="service-card__title">Banheiro</h3>
+            <p class="service-card__desc">Instalações sanitárias disponíveis.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">🅿</div>
+            <h3 class="service-card__title">Estacionamento</h3>
+            <p class="service-card__desc">Estacionamento gratuito para os nossos clientes.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">🛋️</div>
+            <h3 class="service-card__title">Aconchegante</h3>
+            <p class="service-card__desc">Decoração e ambiente que fazem sentir em casa.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">🤫</div>
+            <h3 class="service-card__title">Ambiente tranquilo</h3>
+            <p class="service-card__desc">Espaço calmo, perfeito para descansar ou conversar.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="local" class="section">
-      <h2>Localização</h2>
-      <p>R. José Moreira 37, Vieira de Leiria, Portugal</p>
-
-      <iframe
-        class="map"
-        src="https://www.google.com/maps?q=R.+José+Moreira+37+Vieira+de+Leiria&output=embed"
-      >
-      </iframe>
+    <!-- LOCALIZAÇÃO -->
+    <section id="local" class="section section--local">
+      <div class="container">
+        <p class="section__label">Onde estamos</p>
+        <h2 class="section__title">Localização</h2>
+        <div class="local__inner">
+          <div class="local__info">
+            <div class="local__address">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Endereço</strong>
+                <span>R. José Moreira 37<br>Vieira de Leiria, Portugal</span>
+              </div>
+            </div>
+            <div class="local__address">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <strong>Telefone</strong>
+                <span><a href="tel:+351964500814">+351 964 500 814</a></span>
+              </div>
+            </div>
+            <div class="local__address">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <div>
+                <strong>Instagram</strong>
+                <span><a href="https://www.instagram.com/cafe.oliveiraa/" target="_blank" rel="noopener">@cafe.oliveiraa</a></span>
+              </div>
+            </div>
+            <a class="btn btn--primary btn--full" href="https://maps.app.goo.gl/KDyLqJjfBMAqJTFm6" target="_blank" rel="noopener">
+              Abrir no Google Maps
+            </a>
+          </div>
+          <div class="local__map-wrap">
+            <iframe
+              class="map"
+              title="Localização do Café Oliveira"
+              src="https://www.google.com/maps?q=R.+José+Moreira+37+Vieira+de+Leiria&output=embed"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <p>© 2026 Café Oliveira</p>
+      <div class="container footer__inner">
+        <div class="logo logo--footer">
+          <span class="logo__icon">☕</span>
+          <span class="logo__text">Café Oliveira</span>
+        </div>
+        <p class="footer__copy">© 2026 Café Oliveira · Vieira de Leiria, Portugal</p>
+        <div class="footer__links">
+          <a href="https://www.instagram.com/cafe.oliveiraa/" target="_blank" rel="noopener">Instagram</a>
+          <a href="tel:+351964500814">Ligar</a>
+          <a href="https://maps.app.goo.gl/KDyLqJjfBMAqJTFm6" target="_blank" rel="noopener">Mapa</a>
+        </div>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
